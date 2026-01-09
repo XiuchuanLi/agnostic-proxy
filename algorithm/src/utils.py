@@ -76,5 +76,5 @@ def ind_constraint(x1,x2,x3):
 
 def performance(ndarr, ratio = 0.05):
     ndarr_sorted = np.sort(ndarr)
-    ndarr_trimed = ndarr_sorted[int(len(ndarr)*ratio):int(len(ndarr)*(1-ratio))]
+    ndarr_trimed = ndarr_sorted[round(len(ndarr)*ratio/2):round(len(ndarr)*(1-ratio/2))]
     return ndarr_trimed.mean(), ndarr_trimed.std()
