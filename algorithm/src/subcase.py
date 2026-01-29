@@ -36,7 +36,7 @@ def TestCase(T, O, Z):
     return 'f,g,h'
 
 
-def CalCase(T, O, Z, case, robust=True):
+def CalCase(T, O, Z, case, robust=False):
     
     def perfect(T, O, Z, robust):
         ratio = np.sign(np.cov(T,Z)[0,1]) * np.sqrt(np.abs(cum31(T, Z) / cum31(Z, T)))
